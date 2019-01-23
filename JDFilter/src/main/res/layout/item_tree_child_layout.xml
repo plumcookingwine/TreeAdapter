@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:id="@+id/mRlSub"
+    android:layout_height="wrap_content">
+
+    <CheckBox
+        android:id="@+id/mCbSub"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="false"
+        android:layout_marginBottom="6dp"
+        android:layout_marginLeft="6dp"
+        android:layout_marginRight="6dp"
+        android:background="@drawable/background_cb_filter"
+        android:button="@null"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:maxEms="4"
+        android:maxLines="1"
+        android:paddingBottom="7dp"
+        android:paddingTop="7dp"
+        android:singleLine="true"
+        android:textColor="@color/goods_text_color_cb_filter"
+        android:textSize="@dimen/text_size_12" />
+
+</RelativeLayout>

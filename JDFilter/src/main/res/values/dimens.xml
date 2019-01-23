@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="text_size_small">12sp</dimen>
+    <dimen name="text_size_middle">14sp</dimen>
+    <dimen name="text_size_big">16sp</dimen>
+    <dimen name="text_size_large">18sp</dimen>
+
+
+    <dimen name="common_header_bar_height">56dp</dimen>
+
+    <dimen name="common_padding">16dp</dimen>
+
+    <!--常用间距-->
+    <dimen name="space_100">100.0dip</dimen>
+    <dimen name="space_110">110.0dip</dimen>
+    <dimen name="space_120">120.0dip</dimen>
+    <dimen name="space_80">80.0dip</dimen>
+    <dimen name="space_60">60dp</dimen>
+    <dimen name="space_50">50dp</dimen>
+    <dimen name="space_36">36dp</dimen>
+    <dimen name="space_34">34dp</dimen>
+    <dimen name="space_30">30.0dip</dimen>
+    <dimen name="space_40">40.0dip</dimen>
+    <dimen name="space_28">28.0dip</dimen>
+    <dimen name="space_26">26.0dip</dimen>
+    <dimen name="space_24">24.0dip</dimen>
+    <dimen name="space_22">22.0dip</dimen>
+    <dimen name="space_20">20.0dip</dimen>
+    <dimen name="space_18">18.0dip</dimen>
+    <dimen name="space_16">16.0dip</dimen>
+    <dimen name="space_14">14.0dip</dimen>
+    <dimen name="space_12">12.0dip</dimen>
+    <dimen name="space_10">10.0dip</dimen>
+    <dimen name="space_8">8.0dip</dimen>
+    <dimen name="space_6">6.0dip</dimen>
+    <dimen name="space_4">4.0dip</dimen>
+    <dimen name="space_2">2.0dip</dimen>
+
+    <!--常用文字大小-->
+    <dimen name="text_size_10">10sp</dimen>
+    <dimen name="text_size_12">12sp</dimen>
+    <dimen name="text_size_14">14sp</dimen>
+    <dimen name="text_size_16">16sp</dimen>
+    <dimen name="text_size_18">18sp</dimen>
+    <dimen name="text_size_20">20sp</dimen>
+
+    <!--
+        bottom navigation bar 覆盖默认设置
+        https://github.com/Ashok-Varma/BottomNavigation/issues/70
+    -->
+    <dimen name="fixed_height">50dp</dimen>
+    <dimen name="fixed_height_bottom_padding">4dp</dimen>
+    <dimen name="fixed_height_top_padding_inactive">2dp</dimen>
+    <dimen name="fixed_height_top_padding_active">2dp</dimen>
+    <!-- 取消切换动画 -->
+    <item name="fixed_label_active_to_inactive_ratio" format="float" type="dimen">1</item>
+    <dimen name="fixed_width_padding">2dp</dimen>
+    <dimen name="fixed_label_active">10sp</dimen>
+    <dimen name="fixed_label_inactive">10sp</dimen>
+    <dimen name="fixed_icon_grid">20dp</dimen>
+    <!-- this adds 6 dp extra to top and bottom icon -->
+    <dimen name="fixed_icon_badge_grid_height">36dp</dimen>
+    <!-- this adds 6 dp extra to top and bottom icon -->
+    <dimen name="fixed_icon_badge_grid_width">36dp</dimen>
+    <!-- 10 -->
+    <dimen name="badge_text_size">8sp</dimen>
+</resources>
