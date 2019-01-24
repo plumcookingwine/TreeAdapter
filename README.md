@@ -1,7 +1,17 @@
 # TreeAdapter
 1、使用： compile ‘com.plumcookingwine.tree:TreeRvAdapter:0.0.1’;
 
-2、实体类的创建： TreeListDao是具体封装的对象， 里面有两个泛型，第一个就是父级对象，第二个就是子级集合； 其他属性为一些配置项： // 是否可展开收起 private boolean isEnableExpand = true; // 默认是否展开状态 private boolean isExpand = false; // 是否支持多选 private boolean isMultiCheck = false; // 收起状态最少展示子item数量 private int minCount = 6;
+2、实体类的创建： TreeListDao是具体封装的对象， 里面有两个泛型，第一个就是父级对象，第二个就是子级集合； 其他属性为一些配置项： 
+```
+// 是否可展开收起 
+private boolean isEnableExpand = true; 
+// 默认是否展开状态 
+private boolean isExpand = false; 
+// 是否支持多选 
+private boolean isMultiCheck = false; 
+// 收起状态最少展示子item数量 
+private int minCount = 6;
+```
 
 目前支持这几种配置；以后会逐渐完善。。。
 
@@ -28,7 +38,7 @@
 
 其中FilterDao 是父级对象， OptionDao是子级对象，最后将这两个对象放到TreeListDao对象中: 
 
-`
+```
 	private fun initData(): MutableList<TreeListDao<FilterDao, OptionDao>> {   
 		val list = mutableListOf<TreeListDao<FilterDao, OptionDao>>() 
 		for (i in 0..5) { 
@@ -44,12 +54,12 @@
 	 			dao.isMultiCheck = true } list.add(dao)
 	 		} return list 
 	}
-`
+```
     
 
 2、创建adapter继承自AbsTreeListAdapter，将TreeListDao传进来，重写方法： 
-
-    // 组item的layoutId 
+```
+    	// 组item的layoutId 
 	public abstract int groupLayoutId(); 
 	// 子item的layoutId 
 	public abstract int subLayoutId(); 
@@ -57,3 +67,4 @@
 	public abstract void onBindGroupHolder(GroupItemViewHolder holder, K k, int groupIndex, int position); 
 	// 绑定子item数据（V 为传进来的子对象泛型） 
 	public abstract void onBindSubHolder(SubItemViewHolder holder, V v, int subIndex, int groupIndex, int position);
+```
