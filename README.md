@@ -69,3 +69,6 @@ private int minCount = 6;
 	// 绑定子item数据（V 为传进来的子对象泛型） 
 	public abstract void onBindSubHolder(SubItemViewHolder holder, V v, int subIndex, int groupIndex, int position);
 ```
+
+## 实现  具体的实现原理请看文章： 
+## https://blog.csdn.net/qq_22090073/article/details/86623042
