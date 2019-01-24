@@ -1,65 +1,59 @@
 # TreeAdapter
-一个可以展开和收起的二级列表adapter， demo中实现了一个仿京东商品筛选的一个筛选列表
+1、使用： compile ‘com.plumcookingwine.tree:TreeRvAdapter:0.0.1’;
 
-1、使用：
-        compile ‘com.plumcookingwine.tree:TreeRvAdapter:0.0.1’;
-        
-2、实体类的创建：
-TreeListDao是具体封装的对象， 里面有两个泛型，第一个就是父级对象，第二个就是子级集合；
-其他属性为一些配置项：
-    // 是否可展开收起
-    private boolean isEnableExpand = true;
-    // 默认是否展开状态
-    private boolean isExpand = false;
-    // 是否支持多选
-    private boolean isMultiCheck = false;
-    // 收起状态最少展示子item数量
-    private int minCount = 6;
-    
+2、实体类的创建： TreeListDao是具体封装的对象， 里面有两个泛型，第一个就是父级对象，第二个就是子级集合； 其他属性为一些配置项： // 是否可展开收起 private boolean isEnableExpand = true; // 默认是否展开状态 private boolean isExpand = false; // 是否支持多选 private boolean isMultiCheck = false; // 收起状态最少展示子item数量 private int minCount = 6;
+
 目前支持这几种配置；以后会逐渐完善。。。
 
-（举例）
-      data class FilterDao(
-        var _ID: Int = 0,
-        var mTitle: String = "",
-        var mDesc: String = "",
-        var mCheckOption: List<OptionDao>?
-      )
-      data class OptionDao(
-            var _ID: Int = 0,
-            var mTitle: String = "",
-            var mDesc: String = "",
-            var isCheck: Boolean = false
-      )
-  其中FilterDao 是父级对象， OptionDao是子级对象，最后将这两个对象放到TreeListDao对象中:
-      private fun initData(): MutableList<TreeListDao<FilterDao, OptionDao>> {
-        val list = mutableListOf<TreeListDao<FilterDao, OptionDao>>()
-        for (i in 0..5) {
-            val dao = TreeListDao<FilterDao, OptionDao>()
-            val filterDao = FilterDao(i, "title$i", "title$i", null)
-            val subs = mutableListOf<OptionDao>()
-            for (j in 0..20) {
-                val subListDao = OptionDao(j, "o${j}t${i}", "o${j}t${i}", false)
-                subs.add(subListDao)
-            }
-            dao.groupDao = filterDao
-            dao.subList = subs
-            if (i % 2 == 0) {
-                dao.isMultiCheck = true
-            }
-            list.add(dao)
-        }
-        return list
-    }
-      
-        
-2、创建adapter继承自AbsTreeListAdapter，将TreeListDao传进来，重写方法：
-    // 组item的layoutId
-    public abstract int groupLayoutId();
-    // 子item的layoutId
-    public abstract int subLayoutId();
-    // 绑定组item数据（K 为传进来的父对象泛型）
-    public abstract void onBindGroupHolder(GroupItemViewHolder holder, K k, int groupIndex, int position);
-    // 绑定子item数据（V 为传进来的子对象泛型）
-    public abstract void onBindSubHolder(SubItemViewHolder holder, V v, int subIndex, int groupIndex, int position);
+（举例） 
 
+
+`
+	data class FilterDao(   
+		var _ID: Int = 0, 
+		var mTitle: String = "", 
+		var mDesc: String = "", 
+		var mCheckOption: List?
+	) 
+`
+`
+	data class OptionDao( 
+		var _ID: Int = 0, 
+		var mTitle: String = "", 
+		var mDesc: String = "", 
+		var isCheck: Boolean = false 
+	)
+`
+
+
+其中FilterDao 是父级对象， OptionDao是子级对象，最后将这两个对象放到TreeListDao对象中: 
+
+`
+	private fun initData(): MutableList<TreeListDao<FilterDao, OptionDao>> {   
+		val list = mutableListOf<TreeListDao<FilterDao, OptionDao>>() 
+		for (i in 0..5) { 
+			val dao = TreeListDao<FilterDao, OptionDao>() 
+			val filterDao = FilterDao(i, "title$i", "title$i", null) 
+			val subs = mutableListOf() 
+			for (j in 0..20) {
+	 			val subListDao = OptionDao(j, "o${j}t${i}", "o${j}t${i}", false) 
+				subs.add(subListDao) 
+			}
+	 		dao.groupDao = filterDao 
+			dao.subList = subs if (i % 2 == 0) {
+	 			dao.isMultiCheck = true } list.add(dao)
+	 		} return list 
+	}
+`
+    
+
+2、创建adapter继承自AbsTreeListAdapter，将TreeListDao传进来，重写方法： 
+
+    // 组item的layoutId 
+	public abstract int groupLayoutId(); 
+	// 子item的layoutId 
+	public abstract int subLayoutId(); 
+	// 绑定组item数据（K 为传进来的父对象泛型） 
+	public abstract void onBindGroupHolder(GroupItemViewHolder holder, K k, int groupIndex, int position); 
+	// 绑定子item数据（V 为传进来的子对象泛型） 
+	public abstract void onBindSubHolder(SubItemViewHolder holder, V v, int subIndex, int groupIndex, int position);
