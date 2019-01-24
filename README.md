@@ -52,7 +52,8 @@ private int minCount = 6;
 	 		dao.groupDao = filterDao 
 			dao.subList = subs if (i % 2 == 0) {
 	 			dao.isMultiCheck = true } list.add(dao)
-	 		} return list 
+	 		} 
+		return list 
 	}
 ```
     
