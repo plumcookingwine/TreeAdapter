@@ -70,5 +70,10 @@ private int minCount = 6;
 	public abstract void onBindSubHolder(SubItemViewHolder holder, V v, int subIndex, int groupIndex, int position);
 ```
 
+## 效果
+### 效果：
+<img src="https://img-blog.csdnimg.cn/2019012410500962.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzIyMDkwMDcz,size_16,color_FFFFFF,t_70" width = "" height="500" div align=center />
+<img src="https://img-blog.csdnimg.cn/20190124142702498.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzIyMDkwMDcz,size_16,color_FFFFFF,t_70" width = "" height="500" div align=center />
+
 ## 实现  具体的实现原理请看文章： 
 ## https://blog.csdn.net/qq_22090073/article/details/86623042
