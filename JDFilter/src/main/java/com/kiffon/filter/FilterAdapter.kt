@@ -57,7 +57,7 @@ class FilterAdapter(private val treeList: MutableList<TreeListDao<FilterDao, Opt
         mCbSub?.isChecked = v.isCheck
         mCbSub?.setOnClickListener {
             val check = mCbSub.isChecked
-            if (treeList!![groupIndex].isMultiCheck) {
+            if (treeList!![groupIndex].groupDao.isMultiCheck) {
                 treeList[groupIndex].subList?.map { its ->
                     its.isCheck = false
                 }

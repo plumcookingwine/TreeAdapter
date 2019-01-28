@@ -14,6 +14,8 @@ import java.util.List;
 
 /**
  * Created by Kevin on 2019/1/22.
+ *
+ * K代表组对象， V代表子对象
  */
 public abstract class AbsTreeListAdapter<K, V> extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
@@ -80,7 +82,7 @@ public abstract class AbsTreeListAdapter<K, V> extends RecyclerView.Adapter<Recy
     @Override
     public int getItemCount() {
         int itemCount = 0;
-        if (0 == mGroupItemStatus.size()) {
+        if (mGroupItemStatus == null || 0 == mGroupItemStatus.size()) {
             return itemCount;
         }
         for (int i = 0; i < mTreeList.size(); i++) {

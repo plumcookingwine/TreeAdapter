@@ -7,5 +7,7 @@ data class FilterDao(
         var _ID: Int = 0,
         var mTitle: String = "",
         var mDesc: String = "",
-        var mCheckOption: List<OptionDao>?
+        var mCheckOption: List<OptionDao>?,
+        // 是否支持多选
+        var isMultiCheck: Boolean = false
 )
