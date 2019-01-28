@@ -7,8 +7,6 @@
 private boolean isEnableExpand = true; 
 // 默认是否展开状态 
 private boolean isExpand = false; 
-// 是否支持多选 
-private boolean isMultiCheck = false; 
 // 收起状态最少展示子item数量 
 private int minCount = 6;
 ```
