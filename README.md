@@ -1,5 +1,5 @@
 # TreeAdapter
-1、使用： compile ‘com.plumcookingwine.tree:TreeRvAdapter:0.0.1’;
+1、# 使用： compile ‘com.plumcookingwine.tree:TreeRvAdapter:0.0.2’;
 
 2、实体类的创建： TreeListDao是具体封装的对象， 里面有两个泛型，第一个就是父级对象，第二个就是子级集合； 其他属性为一些配置项： 
 ```
