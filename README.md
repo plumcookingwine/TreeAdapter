@@ -1,5 +1,6 @@
 # TreeAdapter  [ ![Download](https://api.bintray.com/packages/plumcookingwine/plumwine/TreeRvAdapter/images/download.svg) ](https://bintray.com/plumcookingwine/plumwine/TreeRvAdapter/_latestVersion)
 1、# 使用： compile ‘com.plumcookingwine.tree:TreeRvAdapter:0.0.2’;
+   # 由于jcenter仓库正在审核，会build失败，大家可以直接down下来放到项目中
 
 2、实体类的创建： TreeListDao是具体封装的对象， 里面有两个泛型，第一个就是父级对象，第二个就是子级集合； 其他属性为一些配置项： 
 ```
