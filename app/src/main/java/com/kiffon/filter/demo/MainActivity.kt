@@ -1,12 +1,10 @@
 package com.kiffon.filter.demo
 
 import android.app.AlertDialog
-import android.app.Dialog
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.v7.widget.GridLayoutManager
 import android.util.Log
-import android.widget.Toast
 import com.plumcookingwine.tree.ItemStatus
 import com.plumcookingwine.tree.dao.TreeListDao
 import com.kiffon.filter.FilterAdapter
@@ -45,8 +43,6 @@ class MainActivity : AppCompatActivity() {
 //
             mAdapter.setData(initData())
 
-
-
             mBtnConfirm.setOnClickListener {
                 val treeListDao = mAdapter.getSelectOptionDao()
                 var str = ""
@@ -64,7 +60,6 @@ class MainActivity : AppCompatActivity() {
                         .setMessage(str)
                         .create()
                         .show()
-//                Toast.makeText(this, str, Toast.LENGTH_SHORT).show()
 
             }
         }
@@ -86,8 +81,14 @@ class MainActivity : AppCompatActivity() {
             dao.groupDao = filterDao
             dao.subList = subs
 
+            /* 设置为2的整数倍的类不可多选 */
             if (i % 2 == 0) {
-                dao.isMultiCheck = true
+                dao.groupDao.isMultiCheck = true
+            }
+
+            /* 设置为3的整数倍的类不可展开和收起 */
+            if(i % 3 == 0) {
+                dao.isEnableExpand = false
             }
 
             list.add(dao)
