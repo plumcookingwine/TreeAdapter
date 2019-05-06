@@ -1,4 +1,4 @@
-# TreeAdapter  [ ![Download](https://api.bintray.com/packages/plumcookingwine/plumwine/TreeRvAdapter/images/download.svg) ](https://bintray.com/plumcookingwine/plumwine/TreeRvAdapter/_latestVersion)
+# TreeAdapter  [ ![Download](https://api.bintray.com/packages/plumcookingwine/maven/TreeRvAdapter/images/download.svg) ](https://bintray.com/plumcookingwine/maven/TreeRvAdapter/_latestVersion)
 1、# 使用： compile ‘com.plumcookingwine.tree:TreeRvAdapter:0.0.3’;
 0.0.2版本之所以会build失败，是因为上传到jcenter仓库的时候artifactId填错了，引以为戒！
 
